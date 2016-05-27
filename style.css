@@ -1,5 +1,6 @@
 textarea {
-  height: 600px; }
+  height: 600px;
+  font-size: 16px; }
 
 textarea, .output {
   width: 500px;
@@ -9,7 +10,6 @@ textarea, .output {
   text-align: left; }
 
 body {
-  text-align: center;
-  font-size: .8em; }
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
