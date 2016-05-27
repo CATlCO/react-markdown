@@ -1,0 +1,15 @@
+textarea {
+  height: 600px; }
+
+textarea, .output {
+  width: 500px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  text-align: left; }
+
+body {
+  text-align: center;
+  font-size: .8em; }
+
+/*# sourceMappingURL=style.css.map */

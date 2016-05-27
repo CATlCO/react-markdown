@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React Tutorial</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.16/browser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel">
+
+      var InputForm = React.createClass({
+        getInitialState: function() {
+          return {input: '# H1\n## H2\n### H3\n#### H4\n##### H5\n###### H6\nAlternatively, for H1 and H2, an underline-ish style:\nAlt-H1\n======\nAlt-H2\n------\n\nEmphasis, aka italics, with *asterisks* or _underscores_.\nStrong emphasis, aka bold, with **asterisks** or __underscores__.\nCombined emphasis with **asterisks and _underscores_**.\nStrikethrough uses two tildes. ~~Scratch this.~~\n\n1. First ordered list item\n2. Another item\n⋅⋅* Unordered sub-list.\n1. Actual numbers don\'t matter, just that it\'s a number\n⋅⋅1. Ordered sub-list\n4. And another item.\n\n* Unordered list can use asterisks\n- Or minuses\n+ Or pluses' };
+        },
+
+        handleInputChange: function(e) {
+          this.setState({input: e.target.value});
+        },
+
+        render: function() {
+          return (
+            <div>
+              <textarea placeholder="Your markdown here" value={this.state.input} onChange={this.handleInputChange}></textarea>
+              <Output data={this.state.input} />
+            </div>
+          );
+        }
+      });
+
+      var Output = React.createClass({
+        rawMarkup: function() {
+          var rawMarkup = marked(this.props.data.toString(), {sanitize: true});
+          return { __html: rawMarkup };
+        },
+
+        render: function() {
+          return (
+            <div className="output">
+              <span dangerouslySetInnerHTML={this.rawMarkup()} />
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <InputForm />,
+        document.getElementById('content')
+      ); 
+    </script>
+  </body>
+</html>
