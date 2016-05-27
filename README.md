@@ -1,6 +1,6 @@
 # Markdown previewer in React
 
-Project is part of FreeCodeCamp curriculum
+Project is part of [FreeCodeCamp](https://www.freecodecamp.com) curriculum
 
 User Stories: 
 * I can type GitHub-flavored Markdown into a text area.
