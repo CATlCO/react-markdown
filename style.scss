@@ -58,13 +58,9 @@ p{
 		&:after{
 			content: '.';
 			color: red;
-			// background-color: red;
 			position: absolute;
 			bottom: 23px;
 			left: 0;
-			// width: 7.5px;
-			// height: 7.5px;
-			// border-radius: 50%;
 			text-shadow: 1px 1px 1px $white;
 		}
 	}
