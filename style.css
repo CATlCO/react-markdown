@@ -42,14 +42,12 @@ p {
   .title .dot {
     position: relative; }
     .title .dot:after {
-      content: '';
-      background-color: red;
+      content: '.';
+      color: red;
       position: absolute;
-      bottom: 31px;
-      left: 4px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%; }
+      bottom: 23px;
+      left: 0;
+      text-shadow: 1px 1px 1px #FCFCFC; }
 
 textarea {
   height: 500px;
@@ -114,6 +112,8 @@ svg {
     color: #FCFCFC; }
   .dark svg {
     fill: #FCFCFC; }
+  .dark .dot:after {
+    text-shadow: 1px 1px 1px #262626; }
 
 a {
   color: red; }

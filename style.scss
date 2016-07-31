@@ -56,14 +56,16 @@ p{
 		position: relative;
 
 		&:after{
-			content: '';
-			background-color: red;
+			content: '.';
+			color: red;
+			// background-color: red;
 			position: absolute;
-			bottom: 31px;
-			left: 4px;
-			width: 7px;
-			height: 7px;
-			border-radius: 50%;
+			bottom: 23px;
+			left: 0;
+			// width: 7.5px;
+			// height: 7.5px;
+			// border-radius: 50%;
+			text-shadow: 1px 1px 1px $white;
 		}
 	}
 }
@@ -147,6 +149,10 @@ svg{
 
 	svg{
 		fill: $white;
+	}
+
+	.dot:after{
+		text-shadow: 1px 1px 1px $black;
 	}
 }
 
