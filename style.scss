@@ -13,6 +13,13 @@ html, body{
 	padding: 0;
 	font-family: 'Cutive';
 }
+h1, h2, h3, h4, h5, h6, p{
+	margin-top: 0;
+}
+
+p{
+	line-height: 1.5;
+}
 
 .main{
 	text-align: center;
@@ -61,7 +68,6 @@ textarea{
 	outline: none;
 	font-family: 'Cutive Mono';
 	font-size: 20px;
-	caret-color: red;
 
 	color: red;
   -webkit-text-fill-color: $black;
@@ -120,7 +126,6 @@ svg{
 
 	button{
 		color: $white;
-		
 	}
 
 	textarea{
@@ -130,4 +135,8 @@ svg{
 	svg{
 		fill: $white;
 	}
+}
+
+a{
+	color: red;
 }
