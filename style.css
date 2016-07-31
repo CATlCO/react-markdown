@@ -35,15 +35,21 @@ p {
   padding: 20px;
   margin: 0;
   text-align: left;
-  position: relative; }
-  .title span {
+  position: relative;
+  height: 80px; }
+  .title .red {
     color: red; }
-  .title:after {
-    content: '.';
-    color: red;
-    position: absolute;
-    top: -4px;
-    left: 324px; }
+  .title .dot {
+    position: relative; }
+    .title .dot:after {
+      content: '';
+      background-color: red;
+      position: absolute;
+      bottom: 31px;
+      left: 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%; }
 
 textarea {
   height: 500px;
@@ -53,9 +59,12 @@ textarea {
   outline: none;
   font-family: 'Cutive Mono';
   font-size: 20px;
-  color: red;
-  -webkit-text-fill-color: #262626; }
+  color: #262626; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  textarea {
+    color: red;
+    -webkit-text-fill-color: #262626; } }
 textarea, .output {
   width: 49%;
   padding: 20px 50px;
@@ -102,11 +111,16 @@ svg {
   .dark button {
     color: #FCFCFC; }
   .dark textarea {
-    -webkit-text-fill-color: #FCFCFC; }
+    color: #FCFCFC; }
   .dark svg {
     fill: #FCFCFC; }
 
 a {
   color: red; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .dark textarea {
+    color: red;
+    -webkit-text-fill-color: #FCFCFC; } }
 
 /*# sourceMappingURL=style.css.map */
